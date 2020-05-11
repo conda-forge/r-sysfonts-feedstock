@@ -1,4 +1,4 @@
-{% set version = '0.8' %}
+{% set version = "0.8.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sysfonts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sysfonts/sysfonts_{{ version }}.tar.gz
-  sha256: 837c03e6ed0743bf300ba9893543f94c85d0e5a8671ee65013ce677a0548cf72
+  sha256: 24251ba81d4506757cd39ae16d8c93723399e10341486914402e3a091904e4f6
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -49,10 +49,9 @@ test:
 about:
   home: https://github.com/yixuan/sysfonts
   license: GPL-2
-  summary: Loading system fonts and Google Fonts <https://fonts.google.com/> into R, in order
-    to support other packages such as 'R2SWF' and 'showtext'.
+  summary: Loading system fonts and Google Fonts <https://fonts.google.com/> into R, in order to support other packages such as 'R2SWF' and 'showtext'.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
