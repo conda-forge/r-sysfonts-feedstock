@@ -1,4 +1,4 @@
-{% set version = "0.8.2" %}
+{% set version = "0.8.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sysfonts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sysfonts/sysfonts_{{ version }}.tar.gz
-  sha256: 7bd9af63d8a7b64329061d0a5f3300bdf86ab6da2ad4d77d154d6ea076d457bd
+  sha256: a5f1d8f1aa8064f5c1446726be46512c4f24926cce41eda69aa17dc3fb576b02
 
 build:
   merge_build_host: true  # [win]
