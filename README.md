@@ -9,7 +9,7 @@ About r-sysfonts
 
 Home: https://github.com/yixuan/sysfonts
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
 Summary: Loading system fonts and Google Fonts <https://fonts.google.com/> into R, in order to support other packages such as 'R2SWF' and 'showtext'.
 
@@ -18,7 +18,7 @@ About r-sysfonts
 
 Home: https://github.com/yixuan/sysfonts
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
 Summary: Loading system fonts and Google Fonts <https://fonts.google.com/> into R, in order to support other packages such as 'R2SWF' and 'showtext'.
 
