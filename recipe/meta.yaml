@@ -10,6 +10,8 @@ source:
     - {{ cran_mirror }}/src/contrib/sysfonts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sysfonts/sysfonts_{{ version }}.tar.gz
   sha256: 52459c34a625a049d22ea6d6ab799428b954783da04a7c4487d47684b8659f88
+  patches:
+    - patches/0001-minimal-ucrt-libs.patch
 
 build:
   number: 1
@@ -51,7 +53,6 @@ about:
   home: https://github.com/yixuan/sysfonts
   license: GPL-2.0-only
   summary: Loading system fonts and Google Fonts <https://fonts.google.com/> into R, in order to support other packages such as 'R2SWF' and 'showtext'.
-  license_family: GPL2
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:

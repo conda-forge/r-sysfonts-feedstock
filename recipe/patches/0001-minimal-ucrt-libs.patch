@@ -1,0 +1,30 @@
+From 209de76cdf5d2f430d9f130c919a234d54d8b23d Mon Sep 17 00:00:00 2001
+From: Daniel Nachun <daniel.nachun@gmail.com>
+Date: Tue, 29 Oct 2024 15:28:17 -0700
+Subject: [PATCH] minimal ucrt libs
+
+---
+ src/Makevars.ucrt | 13 ++-----------
+ 1 file changed, 2 insertions(+), 11 deletions(-)
+
+diff --git a/src/Makevars.ucrt b/src/Makevars.ucrt
+index 03163dc..1efab34 100644
+--- a/src/Makevars.ucrt
++++ b/src/Makevars.ucrt
+@@ -1,11 +1,2 @@
+-ifeq (,$(shell pkg-config --version 2>/dev/null))
+-  PKG_CPPFLAGS = -I$(R_TOOLS_SOFT)/include/freetype2
+-  LIBBROTLI = $(or $(and $(wildcard $(R_TOOLS_SOFT)/lib/libbrotlidec.a),-lbrotlidec -lbrotlicommon),)
+-  PKG_LIBS = -lfreetype $(LIBBROTLI) -lharfbuzz -lfreetype -lpng -lz -lbz2
+-else
+-  PKG_LIBS = $(shell pkg-config --libs freetype2)
+-  PKG_CPPFLAGS = $(shell pkg-config --cflags freetype2)
+-
+-  # work-around for freetype2 pkg-config file in Rtools43
+-  PKG_CPPFLAGS += -I$(R_TOOLS_SOFT)/include/freetype2
+-endif
++PKG_LIBS = -lfreetype2
++PKG_CPPFLAGS = -I$(subst \,/,$(LIBRARY_INC))/freetype2
+-- 
+2.47.0
+
