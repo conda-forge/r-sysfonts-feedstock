@@ -23,7 +23,7 @@ index 03163dc..1efab34 100644
 -  # work-around for freetype2 pkg-config file in Rtools43
 -  PKG_CPPFLAGS += -I$(R_TOOLS_SOFT)/include/freetype2
 -endif
-+PKG_LIBS = -lfreetype2
++PKG_LIBS = -lfreetype
 +PKG_CPPFLAGS = -I$(subst \,/,$(LIBRARY_INC))/freetype2
 -- 
 2.47.0
